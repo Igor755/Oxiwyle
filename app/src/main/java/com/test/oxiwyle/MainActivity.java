@@ -68,14 +68,14 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
        // if (imageView == R.id.firstbutton) {}
         if (imageView == null) {
             //if (IConstants.debug)
-            Log.d("ImageAreasActivity", "Hot spot image not found");
+            Log.d("MainActivity", "Hot spot image not found");
             return 0;
         } else {
             imageView.setDrawingCacheEnabled(true);
             Bitmap hotspots = Bitmap.createBitmap(imageView.getDrawingCache());
             if (hotspots == null || ((x < 1 || y < 1) || (x > hotspots.getWidth() || y > hotspots.getHeight()))) {
                 //if (IConstants.debug)
-                Log.d("ImageAreasActivity", "Hot spot bitmap was not created");
+                Log.d("MainActivity", "Hot spot bitmap was not created");
                 return 0;
             } else {
                 imageView.setDrawingCacheEnabled(false);
