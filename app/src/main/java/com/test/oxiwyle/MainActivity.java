@@ -1,27 +1,22 @@
 package com.test.oxiwyle;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
-import android.graphics.Matrix;
+import android.graphics.Typeface;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
-import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.load.MultiTransformation;
-import com.bumptech.glide.load.resource.bitmap.CenterCrop;
-import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
@@ -32,6 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
     public ImageView threebutton;
     public ImageView fourbutton;
     public ImageView fivebutton;
+    public TextView textView;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -43,12 +39,18 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         imageView = (ImageView) findViewById(R.id.image);
         Glide.with(this).load(R.drawable.bg_main_2160x3840).into(imageView);
 
+        Typeface tf = Typeface.createFromAsset(getAssets(),
+                "cyrillic_old.ttf");
+
 
         firstbutton = (ImageView) findViewById(R.id.firstbutton);
         twobutton = (ImageView) findViewById(R.id.twobutton);
         threebutton = (ImageView) findViewById(R.id.threebutton);
         fourbutton = (ImageView) findViewById(R.id.fourbutton);
         fivebutton = (ImageView) findViewById(R.id.fivebutton);
+        textView = (TextView) findViewById(R.id.textview);
+
+        textView.setTypeface(tf);
 
 
         TheBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.first1);
