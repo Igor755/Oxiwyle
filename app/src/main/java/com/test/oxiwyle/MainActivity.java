@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         textView.setTypeface(tf);
 
 
-        TheBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.first1);
+       // TheBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.first1);
 
         firstbutton.setOnTouchListener(this);
         twobutton.setOnTouchListener(this);
@@ -132,14 +132,8 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                                 Toast.makeText(MainActivity.this, "5555555555555555555555", Toast.LENGTH_SHORT).show();
                                 fivebutton.setImageResource(R.drawable.five2);
                                // Alert(name = "5");
-
                             }
-
-
-
                         }
-
-
                         break;
 
                     }
@@ -148,28 +142,23 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
                         handledHere = true;
                         if (v.getId() == R.id.firstbutton) {
-                            firstbutton.setImageResource(R.drawable.first1);
+                            firstbutton.setImageResource(R.drawable.firstph);
                         }else if (v.getId() == R.id.twobutton){
-                            twobutton.setImageResource(R.drawable.two1);
+                            twobutton.setImageResource(R.drawable.twoph);
                         }else if (v.getId() == R.id.threebutton){
-                            threebutton.setImageResource(R.drawable.three1);
+                            threebutton.setImageResource(R.drawable.threeph);
                         }else if (v.getId() == R.id.fourbutton){
-                            fourbutton.setImageResource(R.drawable.four1);
+                            fourbutton.setImageResource(R.drawable.fourph);
                         }else if (v.getId() == R.id.fivebutton){
-                            fivebutton.setImageResource(R.drawable.five1);
-
+                            fivebutton.setImageResource(R.drawable.fiveph);
                         }
                         break;
                     }
                     default:
                         handledHere = false;
                         break;
-
                 }
-
         return handledHere;
-
-
         }
 
 
