@@ -1,4 +1,16 @@
 <resources>
     <string name="app_name">Oxiwyle</string>
     <string name="date">01.01.1917</string>
+
+    <string name="number">КНОПКА НОМЕР:</string>
+    <string name="button">Номер кнопки</string>
+    <string name="ok">ОК</string>
+
+
+
+
+
+
+
+
 </resources>

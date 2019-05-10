@@ -108,7 +108,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     case MotionEvent.ACTION_DOWN: {
 
                         ////&& Color.alpha(touchColor1) != Color.TRANSPARENT
-                        
+
                         if (touchColor1 != 0  && Color.alpha(touchColor1)> 204) {
                             handledHere = true;
                             if (v.getId() == R.id.firstbutton){
@@ -168,11 +168,11 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         public void Alert(String name){
 
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setTitle("Номер кнопки")
-                    .setMessage("КНОПКА НОМЕР: " + name)
+            builder.setTitle(R.string.number)
+                    .setMessage(R.string.button + name)
                     .setIcon(R.drawable.alarm)
                     .setCancelable(false)
-                    .setNegativeButton("ОК",
+                    .setNegativeButton(R.string.ok,
                             new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     dialog.cancel();
