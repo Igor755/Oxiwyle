@@ -108,8 +108,9 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     case MotionEvent.ACTION_DOWN: {
 
                         ////&& Color.alpha(touchColor1) != Color.TRANSPARENT
+                        ////проверяем на прозрачность 80%
 
-                        if (touchColor1 != 0  && Color.alpha(touchColor1)> 204) {
+                        if (touchColor1 != 0 && Color.alpha(touchColor1)> 204) {
                             handledHere = true;
                             if (v.getId() == R.id.firstbutton){
                                 Toast.makeText(MainActivity.this, "111111111111111", Toast.LENGTH_SHORT).show();
@@ -169,7 +170,7 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
             builder.setTitle(R.string.number)
-                    .setMessage(R.string.button + name)
+                    .setMessage(MainActivity.this.getString(R.string.button) + " "  + name)
                     .setIcon(R.drawable.alarm)
                     .setCancelable(false)
                     .setNegativeButton(R.string.ok,
