@@ -48,18 +48,18 @@
        android:layout_height="60dp"
        android:background="#00000000"
        android:scaleType="fitXY"
-       android:src="@drawable/firstph"
+       android:src="@drawable/first1"
        app:layout_constraintBottom_toBottomOf="parent"
        app:layout_constraintHorizontal_bias="0.0"
        app:layout_constraintLeft_toLeftOf="parent"
        app:layout_constraintRight_toRightOf="parent"
        app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.439" />
+       app:layout_constraintVertical_bias="0.439"/>
 
    <ImageView
        android:layout_width="118dp"
        android:layout_height="60dp"
-       android:src="@drawable/twoph"
+       android:src="@drawable/two1"
        android:id="@+id/twobutton"
        android:background="#00000000"
        app:layout_constraintBottom_toBottomOf="parent"
@@ -72,7 +72,7 @@
    <ImageView
        android:layout_width="120dp"
        android:layout_height="70dp"
-       android:src="@drawable/threeph"
+       android:src="@drawable/three1"
        android:background="#00000000"
        android:id="@+id/threebutton"
        app:layout_constraintBottom_toBottomOf="parent"
@@ -85,7 +85,7 @@
    <ImageView
        android:layout_width="112dp"
        android:layout_height="60dp"
-       android:src="@drawable/fourph"
+       android:src="@drawable/four1"
        android:background="#00000000"
        android:id="@+id/fourbutton"
        app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +98,7 @@
    <ImageView
        android:layout_width="120dp"
        android:layout_height="70dp"
-       android:src="@drawable/fiveph"
+       android:src="@drawable/five1"
        android:background="#00000000"
        android:id="@+id/fivebutton"
        app:layout_constraintBottom_toBottomOf="parent"

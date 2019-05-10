@@ -106,7 +106,10 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                 switch (eventPadTouch) {
 
                     case MotionEvent.ACTION_DOWN: {
-                        if (touchColor1 != 0 && Color.alpha(touchColor1) != Color.TRANSPARENT) {
+
+                        ////&& Color.alpha(touchColor1) != Color.TRANSPARENT
+                        
+                        if (touchColor1 != 0  && Color.alpha(touchColor1)> 204) {
                             handledHere = true;
                             if (v.getId() == R.id.firstbutton){
                                 Toast.makeText(MainActivity.this, "111111111111111", Toast.LENGTH_SHORT).show();
@@ -142,15 +145,15 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
                         handledHere = true;
                         if (v.getId() == R.id.firstbutton) {
-                            firstbutton.setImageResource(R.drawable.firstph);
+                            firstbutton.setImageResource(R.drawable.first1);
                         }else if (v.getId() == R.id.twobutton){
-                            twobutton.setImageResource(R.drawable.twoph);
+                            twobutton.setImageResource(R.drawable.two1);
                         }else if (v.getId() == R.id.threebutton){
-                            threebutton.setImageResource(R.drawable.threeph);
+                            threebutton.setImageResource(R.drawable.three1);
                         }else if (v.getId() == R.id.fourbutton){
-                            fourbutton.setImageResource(R.drawable.fourph);
+                            fourbutton.setImageResource(R.drawable.four1);
                         }else if (v.getId() == R.id.fivebutton){
-                            fivebutton.setImageResource(R.drawable.fiveph);
+                            fivebutton.setImageResource(R.drawable.five1);
                         }
                         break;
                     }
