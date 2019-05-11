@@ -3,7 +3,6 @@ package com.test.oxiwyle;
 import android.annotation.SuppressLint;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.support.v7.app.AlertDialog;
@@ -14,14 +13,12 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity implements View.OnTouchListener {
 
     public ImageView imageView;
-    Bitmap TheBitmap;
     public ImageView firstbutton;
     public ImageView twobutton;
     public ImageView threebutton;
@@ -53,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
         textView.setTypeface(tf);
 
 
-       // TheBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.first1);
 
         firstbutton.setOnTouchListener(this);
         twobutton.setOnTouchListener(this);
@@ -67,16 +63,13 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
 
         ImageView imageView = (ImageView) findViewById(hotspotId);
 
-       // if (imageView == R.id.firstbutton) {}
         if (imageView == null) {
-            //if (IConstants.debug)
             Log.d("MainActivity", "Hot spot image not found");
             return 0;
         } else {
             imageView.setDrawingCacheEnabled(true);
             Bitmap hotspots = Bitmap.createBitmap(imageView.getDrawingCache());
             if (hotspots == null || ((x < 1 || y < 1) || (x > hotspots.getWidth() || y > hotspots.getHeight()))) {
-                //if (IConstants.debug)
                 Log.d("MainActivity", "Hot spot bitmap was not created");
                 return 0;
             } else {
@@ -108,34 +101,29 @@ public class MainActivity extends AppCompatActivity implements View.OnTouchListe
                     case MotionEvent.ACTION_DOWN: {
 
                         ////&& Color.alpha(touchColor1) != Color.TRANSPARENT
-                        ////проверяем на прозрачность 80%
+                        ////проверяем на прозрачность 80% = 204
 
                         if (touchColor1 != 0 && Color.alpha(touchColor1)> 204) {
                             handledHere = true;
                             if (v.getId() == R.id.firstbutton){
-                                Toast.makeText(MainActivity.this, "111111111111111", Toast.LENGTH_SHORT).show();
                                 firstbutton.setImageResource(R.drawable.first2);
-                                 Alert(name = "1");
+                                Alert(name = "1");
 
                             }else if (v.getId() == R.id.twobutton){
-                                Toast.makeText(MainActivity.this, "2222222222222222", Toast.LENGTH_SHORT).show();
                                 twobutton.setImageResource(R.drawable.two2);
-                             //   Alert(name = "2");
+                                Alert(name = "2");
 
                             }else if (v.getId() == R.id.threebutton){
-                                Toast.makeText(MainActivity.this, "3333333333333333", Toast.LENGTH_SHORT).show();
                                 threebutton.setImageResource(R.drawable.three2);
-                             //   Alert(name = "3");
+                                Alert(name = "3");
 
                             }else if (v.getId() == R.id.fourbutton){
-                                Toast.makeText(MainActivity.this, "444444444444444444444", Toast.LENGTH_SHORT).show();
                                 fourbutton.setImageResource(R.drawable.four2);
-                             //   Alert(name = "4");
+                                Alert(name = "4");
 
                             }else if (v.getId() == R.id.fivebutton){
-                                Toast.makeText(MainActivity.this, "5555555555555555555555", Toast.LENGTH_SHORT).show();
                                 fivebutton.setImageResource(R.drawable.five2);
-                               // Alert(name = "5");
+                                Alert(name = "5");
                             }
                         }
                         break;
